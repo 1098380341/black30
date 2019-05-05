@@ -8,6 +8,8 @@ import './assets/statics/site/css/style.css'
 import index from './components/index.vue'
 // 导入详情页
 import detail from './components/detail.vue'
+// 导入会员中心
+ import contContainer from './components/contContainer.vue'
 
 // 导入饿了吗插件
 import ElementUI from 'element-ui';
@@ -31,6 +33,10 @@ const routes=[
   {
     path:'/detail/:id',
     component:detail
+  },
+  {
+    path:"/contContainer",
+    component:contContainer
   }
 ]
 
