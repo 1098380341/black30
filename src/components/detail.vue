@@ -204,7 +204,7 @@
 </template>
 
 <script>
-import axios from "axios";
+// import axios from "axios";
 import moment from"moment";
 export default {
   name: "detail",
@@ -222,9 +222,9 @@ export default {
     //  console.log(this.$route);
     // 用了router 自动生成 $route  id在params里面 直接点出来
     // 获取id后 发axios请求
-    axios
+    this.$axios
       .get(
-        `http://111.230.232.110:8899/site/goods/getgoodsinfo/${
+        `/site/goods/getgoodsinfo/${
           this.$route.params.id
         }`
       )

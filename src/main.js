@@ -41,6 +41,13 @@ const router=new VueRouter({
 
 Vue.config.productionTip = false
 
+// 导入axios
+import axios from 'axios'
+Vue.prototype.$axios=axios;
+
+// 
+axios.defaults.baseURL = 'http://111.230.232.110:8899';
+
 new Vue({
   render: h => h(App),
   router
