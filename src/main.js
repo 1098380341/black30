@@ -21,6 +21,10 @@ Vue.use(VueRouter)
 // 写规则  linkto后经过规则 在跳转响应的网页
 const routes=[
   {
+    path:'/',
+    redirect:'/index' 
+  },
+  {
     path:'/index',
     component:index
   },
