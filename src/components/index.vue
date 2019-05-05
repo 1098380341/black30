@@ -188,7 +188,7 @@
 // 导入axios
 // import axios from "axios";
 // 导入moment
- import moment from "moment"
+//  import moment from "moment"
 
 export default {
   name: "index",
@@ -221,11 +221,11 @@ export default {
       });
 
   },
-  filters:{
-      formatTime(value){
-          return moment(value).format("YYYY年MM月DD日");
-      }
-  }
+  // filters:{
+  //     formatTime(value){
+  //         return moment(value).format("YYYY年MM月DD日");
+  //     }
+  // }
 };
 </script>
 
