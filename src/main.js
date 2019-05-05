@@ -10,9 +10,13 @@ import index from './components/index.vue'
 import detail from './components/detail.vue'
 // 导入会员中心
  import contContainer from './components/contContainer.vue'
-
+//  导入gls
+ import vipgls from './components/vipgls.vue'
+//  导入嵌套的路由
+ import vipOrderDetail from './components/vipOrderDetail.vue'
 // 导入饿了吗插件
 import ElementUI from 'element-ui';
+
 import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(ElementUI);
 
@@ -34,9 +38,25 @@ const routes=[
     path:'/detail/:id',
     component:detail
   },
+  // 会员中心
   {
     path:"/contContainer",
-    component:contContainer
+    component:contContainer,
+    //嵌套路由path不写/
+    children:[
+      {
+        path:'vipgls',
+        component:vipgls
+      },
+      {
+        path:'',// 等同于 /
+        redirect:'vipgls'
+      },
+      {
+        path:'vipOrderDetail',
+        component:vipOrderDetail
+      }
+    ]
   }
 ]
 
